@@ -3,7 +3,12 @@ var source = process.argv[3];
 var convertto = process.argv[5];
 
 console.log(value, source, convertto);
+
+// Consider using a `switch` statement instead of `if`
 if(source == 'm') {
+    // Remember: Don't repeat yourself.
+    // Your `console.log` statement look very similar for each line. You repeat the constant "Your solution is" over and
+    // over again. This does not make your code maintainable. Try to avoid repetitions like that.
     console.log(`Your solution is  ${value*100}`);
 }
 if(source == 'm' && convertto == 'mm') {
@@ -37,6 +42,8 @@ var convertto1 = process.argv[5];
 var calc1;
 var calc2;
 
+// You could add a check for calc1 and calc2 to the for-condition because you can stop the
+// for loop once both values have been found.
 for(i=0; i<measurements.length; i++) {
     if(source1 == measurements[i]) {
         calc1 = potency[i];
